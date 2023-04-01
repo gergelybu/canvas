@@ -18,6 +18,7 @@ $(function () {
     y: imgY,
   });
   let i = 1;
+
   $("#reset").on("click", function () {
     $("canvas").clearCanvas();
     $("canvas").drawImage({
@@ -52,5 +53,7 @@ $(function () {
     } else {
       alert("Too many characters!");
     }
+  });
+  $("#gen").on("click", function () {
   });
 });
