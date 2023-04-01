@@ -17,6 +17,7 @@ $(function () {
     x: imgX,
     y: imgY,
   });
+  let i = 1;
   $("#reset").on("click", function () {
     $("canvas").clearCanvas();
     $("canvas").drawImage({
@@ -35,5 +36,21 @@ $(function () {
       x: imgX,
       y: imgY,
     });
+    i = 1;
+  });
+
+  $("#add").on("click", function () {
+    if (i < 4) {
+      $("canvas").drawImage({
+        layer: true,
+        draggable: true,
+        source: "./img/warrior.png",
+        x: imgX,
+        y: imgY,
+      });
+      i += 1;
+    } else {
+      alert("Too many characters!");
+    }
   });
 });
