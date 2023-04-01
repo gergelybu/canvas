@@ -1,29 +1,51 @@
-$(function () {
-  $("canvas").drawImage({
-    layer: true,
-    source: "./img/field.png",
-    x: 0,
-    y: 0,
-    width: 400,
-    height: 300,
-    fromCenter: false,
-  });
-  imgX = 100;
-  imgY = 100;
-  $("canvas").drawImage({
-    layer: true,
-    draggable: true,
-    source: "./img/warrior.png",
-    x: imgX,
-    y: imgY,
-  });
-  let i = 1;
+import { JOBS } from "./data.js";
 
-  $("#reset").on("click", function () {
-    $("canvas").clearCanvas();
+$(function () {
+  const ART = $("article");
+
+  ART.html(characters(JOBS));
+
+  function characters(list) {
+    let txt = "<div class='cardHolder'>";
+    for (let index = 0; index < list.length; index++) {
+      txt += "<div class='card'>";
+      for (const key in list[index]) {
+        if (key == "image") {
+          txt += `<img src='${list[index].image}' alt="">`;
+        } else {
+          txt += `<p> ${list[index][key]} </p>`;
+        }
+      }
+      txt += "<button type='button' class='partyAdd'>Add to party</button></div>";
+    }
+    txt += "</div>";
+    console.log(txt);
+    return txt;
+  }
+});
+
+   const BG = $("#bg");
+  $("#bgsub").on("click", function () {
+    let bgimg = "./img/bg/" + BG.val();
     $("canvas").drawImage({
       layer: true,
-      source: "./img/field.png",
+      source: bgimg,
+      x: 0,
+      y: 0,
+      width: 400,
+      height: 300,
+      fromCenter: false,
+    });
+  });
+  let imgX = 100;
+  let imgY = 100;
+  let i = 0;
+  $("#reset").on("click", function () {
+    $("canvas").clearCanvas();
+    let bgimg = "./img/bg/" + BG.val();
+    $("canvas").drawImage({
+      layer: true,
+      source: bgimg,
       x: 0,
       y: 0,
       width: 400,
@@ -33,7 +55,7 @@ $(function () {
     $("canvas").drawImage({
       layer: true,
       draggable: true,
-      source: "./img/warrior.png",
+      source: "./img/char/warrior.png",
       x: imgX,
       y: imgY,
     });
@@ -45,7 +67,7 @@ $(function () {
       $("canvas").drawImage({
         layer: true,
         draggable: true,
-        source: "./img/warrior.png",
+        source: "./img/char/warrior.png",
         x: imgX,
         y: imgY,
       });
@@ -54,6 +76,5 @@ $(function () {
       alert("Too many characters!");
     }
   });
-  $("#gen").on("click", function () {
-  });
-});
+  $("#gen").on("click", function () {});
+

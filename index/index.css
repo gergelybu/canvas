@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "manaspace";
+    src: url("../font/ManaspaceRegular-ZJwZ.ttf");
+}
+
+canvas{
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    background-color: #0e0091;
+}
+
+aside{
+    margin-top: 20px;
+    margin-left:calc(40% - 10px);
+    color: white;
+}
+
+aside #reset{
+    margin-left: 115px;
+}
+
+.cardHolder{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card{
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    padding-top: 30px;
+    border-radius: 5%;
+    color: white;
+    width: calc(20%);
+    height: 220px;
+    text-align: center;
+    font-family: "manaspace";
+}

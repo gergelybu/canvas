@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="/jCanvas.js"></script>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="./jCanvas.js"></script>
+    <script src="index/index.js" type="module"></script>
+    <link rel="stylesheet" href="./index/index.css" />
     <title>Document</title>
-</head>
-<body>
-    <canvas width="400" height="300"></canvas><br>
-    <button type="button" id="add">Add character</button>
-    <button type="button" id="reset">Reset position</button>
-    <button type="button" id="gen">Generate Image</button>
-</body>
+  </head>
+  <body>
+    <article></article>
+    <aside>
+      <form action="">
+        <label for="bg">Choose a background:</label>
+        <select name="bg" id="bg">
+          <option value="city.png">city</option>
+          <option value="desert.png">desert</option>
+          <option value="field.png">field</option>
+          <option value="ship.png">ship</option>
+          <option value="temple.png">temple</option>
+          <option value="temple_2.png">temple other</option>
+          <input type="button" value="Submit" id="bgsub" />
+        </select>
+      </form>
+      <canvas width="400" height="300"></canvas><br />
+      <button type="button" id="reset">Reset position</button>
+      <button type="button" id="gen">Generate Image</button>
+    </aside>
+  </body>
 </html>
