@@ -11,23 +11,31 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <div>
+        <img src="./img/ffi_logo.png" alt="" />
+      </div>
+    </header>
+    <nav></nav>
     <article></article>
     <aside>
-      <form action="">
-        <label for="bg">Choose a background:</label>
-        <select name="bg" id="bg">
-          <option value="city.png">city</option>
-          <option value="desert.png">desert</option>
-          <option value="field.png">field</option>
-          <option value="ship.png">ship</option>
-          <option value="temple.png">temple</option>
-          <option value="temple_2.png">temple other</option>
-          <input type="button" value="Submit" id="bgsub" />
-        </select>
-      </form>
-      <canvas width="400" height="300"></canvas><br />
-      <button type="button" id="reset">Reset position</button>
-      <button type="button" id="gen">Generate Image</button>
+      <div>
+        <form action="">
+          <label for="bg">Choose a background:</label>
+          <select name="bg" id="bg">
+            <option value="city.png">city</option>
+            <option value="desert.png">desert</option>
+            <option value="field.png">field</option>
+            <option value="ship.png">ship</option>
+            <option value="temple.png">temple</option>
+            <option value="temple_2.png">temple other</option>
+            <input type="button" value="Submit" id="bgsub" />
+          </select>
+        </form>
+        <canvas width="400" height="300"></canvas><br />
+        <button type="button" id="reset">Reset position</button>
+        <button type="button" id="gen">Generate Image</button>
+      </div>
     </aside>
   </body>
 </html>

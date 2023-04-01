@@ -21,7 +21,7 @@ export const JOBS = [
     image: "./img/char/redmage.png",
     name: "red mage",
     type: "hybrid",
-    speciality: "limited black and white magic, limited weapons",
+    speciality: "black and white magic, weapons",
   },
   {
     image: "./img/char/whitemage.png",

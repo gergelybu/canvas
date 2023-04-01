@@ -1,45 +1,81 @@
 @font-face {
-    font-family: "manaspace";
-    src: url("../font/ManaspaceRegular-ZJwZ.ttf");
+  font-family: "manaspace";
+  src: url("../font/ManaspaceRegular-ZJwZ.ttf");
 }
 
-canvas{
-    border: 5px solid rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    background-repeat: no-repeat;
-    background-size: cover;
+header {
+  text-align: center;
+  margin: auto;
 }
 
-body{
-    background-color: #0e0091;
+canvas {
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-aside{
-    margin-top: 20px;
-    margin-left:calc(40% - 10px);
-    color: white;
+body {
+  background-color: #0e0091;
 }
 
-aside #reset{
-    margin-left: 115px;
+button {
+  background-color: #0e0091;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  color: white;
+  font-family: "manaspace";
 }
 
-.cardHolder{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+aside {
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+  color: white;
 }
 
-.card{
-    border: 5px solid rgb(255, 255, 255);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    padding-top: 30px;
-    border-radius: 5%;
-    color: white;
-    width: calc(20%);
-    height: 220px;
-    text-align: center;
-    font-family: "manaspace";
+form {
+  margin-left: 5px;
+  font-family: "manaspace";
+  margin-bottom: 10px;
+}
+
+#bgsub {
+  background-color: #0e0091;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  color: white;
+  font-family: "manaspace";
+  margin-left: 5px;
+}
+
+.cardHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  padding-top: 30px;
+  border-radius: 5%;
+  color: white;
+  width: 20%;
+  height: 220px;
+  text-align: center;
+  font-family: "manaspace";
+}
+
+@media screen and (max-width = 700px) {
+  .cardHolder {
+    align-content: stretch;
+    align-content: space-between;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+  }
 }
