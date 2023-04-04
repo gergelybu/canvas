@@ -46,17 +46,10 @@ export function reset(PARTY, BG) {
   gen(PARTY);
 }
 
-export function partyAdd(PARTY, JOBS){
-if (PARTY.length < 4) {
-    let index = $(this).data("index");
-    index = parseInt(index);
-    let pic = JOBS[index].image;
-    PARTY.push(pic);
-     let txt = `<tr><td class="jobName" ><p>${JOBS[index].name}</p></td><td><button type='button' class='remove' data-index=${PARTY.length}>❌</button></td><tr>`;
-    $("#partyTable").append(txt);
-    gen(PARTY);
-  } else {
-    alert("Too many party members!");
+export function resetParty(PARTY, JOBS) {
+  let txt = "";
+  for (let index = 0; index < PARTY.length; index++) {
+    txt += `<tr><td class="jobName" ><p>${JOBS[index].name}</p></td><td><button type='button' class='remParty' data-index=${PARTY.length}>❌</button></td><tr>`;
   }
-  return PARTY;
-};
+  $("#partyTable").html(txt);
+}

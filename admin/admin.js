@@ -6,13 +6,18 @@ $(function () {
   localStorage.setItem("JOBS", JSON.stringify(JOBS));
   ART.html(generateTable(JOBS, JOBINFO));
   $("#add").on("click", function () {
-    addJOB(JOBS),  setLocalJobs(JOBS), ART.html(generateTable(JOBS, JOBINFO));
+    addJOB(JOBS);
+    setLocalJobs(JOBS);
+    ART.html(generateTable(JOBS, JOBINFO));
   });
   $(".remove").on("click", function () {
-    removeJob(JOBS),  setLocalJobs(JOBS), ART.html(generateTable(JOBS, JOBINFO));
+    let index = $(this).data("index");
+    removeJob(JOBS,index);
+    setLocalJobs(JOBS);
+    ART.html(generateTable(JOBS, JOBINFO));
   });
 });
 
 function setLocalJobs(jobs) {
-    localStorage.setItem("JOBS", JSON.stringify(jobs));
-  }
+  localStorage.setItem("JOBS", JSON.stringify(jobs));
+}

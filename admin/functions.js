@@ -5,7 +5,7 @@ export function generateTable(list, header) {
   }
   txt += "<th>Remove</th><th>Edit</th></tr>";
   for (let index = 0; index < list.length; index++) {
-    txt += "<tr>";
+    txt += `<tr>`;
     for (const key in list[index]) {
       if (key == "image") {
         txt += `<td><img src='${list[index].image}' alt=""></td>`;
@@ -19,8 +19,7 @@ export function generateTable(list, header) {
   return txt;
 }
 
-export function removeJob(JOBS) {
-  let index = $(this).data("index");
+export function removeJob(JOBS, index) {
   JOBS.splice(index, 1);
   return JOBS;
 }

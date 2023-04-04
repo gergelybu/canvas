@@ -28,6 +28,8 @@ nav button {
 
 body {
   background-color: #0e0091;
+  font-family: "manaspace";
+  color: white;
 }
 
 aside{
@@ -55,10 +57,15 @@ article{
 
 table{
   margin: auto;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 table, td, tr{
   border: 1px solid white;
+}
+
+table tr:hover{
+  background-color: rgb(77, 24, 24);
 }
 
 td {

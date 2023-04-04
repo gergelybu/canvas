@@ -44,4 +44,4 @@ export const JOBINFO = {
   speciality: "speciality",
 };
 
-export const PARTY=$([]);
+export const PARTY=[];

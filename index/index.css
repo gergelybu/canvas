@@ -29,6 +29,8 @@ canvas {
 
 body {
   background-color: #0e0091;
+  font-family: "manaspace";
+  color: white;
 }
 
 button {
@@ -51,7 +53,6 @@ aside {
 
 form {
   margin-left: 5px;
-  font-family: "manaspace";
   margin-bottom: 10px;
 }
 
@@ -77,25 +78,20 @@ form {
   box-shadow: 0 0 10px rgb(255, 255, 255);
   padding-top: 30px;
   border-radius: 5%;
-  color: white;
   width: 20%;
   height: 220px;
   text-align: center;
-  font-family: "manaspace";
 }
 
 #partyList {
   border: 5px solid rgb(255, 255, 255);
   box-shadow: 0 0 10px rgb(255, 255, 255);
   border-radius: 5%;
-  text-align: center;
-  font-family: "manaspace";
   width: 300px;
   height: 300px;
 }
 
 #partyTable {
-  text-align: center;
   margin-left: calc(40px + 10%);
   gap: 10px;
   padding-bottom: 0px;
@@ -104,10 +100,6 @@ form {
 
 .jobName{
   width: 150px;
-}
-
-h1 {
-  font-family: "manaspace";
 }
 
 @media screen and (max-width = 700px) {
