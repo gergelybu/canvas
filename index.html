@@ -16,9 +16,14 @@
         <img src="./img/ffi_logo.png" alt="" />
       </div>
     </header>
-    <nav></nav>
+    <nav>
+      <button type="button" onclick="window.location.href='./index.html'">Index</button>
+      <button type="button" onclick="window.location.href='./admin.html'">Admin</button>
+    </nav>
     <article></article>
     <aside>
+      <div id="partyList"><h1>Party list</h1>
+        <table id="partyTable"></table></div>
       <div>
         <form action="">
           <label for="bg">Choose a background:</label>
@@ -33,8 +38,8 @@
           </select>
         </form>
         <canvas width="400" height="300"></canvas><br />
-        <button type="button" id="reset">Reset position</button>
-        <button type="button" id="gen">Generate Image</button>
+        <!-- <button type="button" id="reset">Reset position</button>
+        <button type="button" id="gen">Generate Image</button> -->
       </div>
     </aside>
   </body>

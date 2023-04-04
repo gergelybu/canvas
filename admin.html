@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./admin/admin.css" />
+    <script src="./admin/admin.js" type="module"></script>
+    <title>Admin site</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="./img/ffi_logo.png" alt="" />
+      </div>
+    </header>
+    <nav>
+      <button type="button" onclick="window.location.href='./index.html'">
+        Index
+      </button>
+      <button type="button" onclick="window.location.href='./admin.html'">
+        Admin
+      </button>
+    </nav>
+    <article></article>
+    <aside>
+      <form action="">
+    <fieldset>
+        <label for="jname">Job name:</label>
+        <input type="text" id="jname" name="jname" /><br />
+        <label for="jtype">Job type:</label>
+        <select name="jytpe" id="jytpe">
+          <option value="hybrid">Hybrid</option>
+          <option value="magic">Magic</option>
+          <option value="martial">Martial</option>
+        </select><br />
+        <label for="jspec">Speciality:</label>
+        <input type="text" id="jspec" name="jspec" /><br />
+        <label for="jimage">Job image:</label>
+        <select name="jimage" id="jimage">
+          <option value="pic1">1</option>
+          <option value="pic2">2</option>
+          <option value="pic3">3</option>
+          <option value="pic4">4</option>
+          <option value="pic5">5</option>
+        </select>
+        <div id="jimage"></div>
+        <button type="button">Add job</button>
+    </fieldset>
+      </form>
+    </aside>
+  </body>
+</html>

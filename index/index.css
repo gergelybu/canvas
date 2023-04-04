@@ -6,6 +6,18 @@
 header {
   text-align: center;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+nav{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav button{
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 canvas {
@@ -29,9 +41,12 @@ button {
 
 aside {
   text-align: center;
-  margin: auto;
+  width: auto;
   padding-top: 20px;
   color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 form {
@@ -69,11 +84,33 @@ form {
   font-family: "manaspace";
 }
 
+#partyList {
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  border-radius: 5%;
+  text-align: center;
+  font-family: "manaspace";
+  width: 300px;
+  height: 300px;
+}
+
+#partyTable {
+  text-align: center;
+  margin-left: calc(40px + 10%);
+  gap: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.jobName{
+  width: 150px;
+}
+
+h1 {
+  font-family: "manaspace";
+}
+
 @media screen and (max-width = 700px) {
-  .cardHolder {
-    align-content: stretch;
-    align-content: space-between;
-  }
   .card {
     width: 100%;
     height: auto;

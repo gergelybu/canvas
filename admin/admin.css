@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "manaspace";
+  src: url("../font/ManaspaceRegular-ZJwZ.ttf");
+}
+
+body {
+  color: white;
+  font-family: "manaspace";
+}
+
+header {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+nav button {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+body {
+  background-color: #0e0091;
+}
+
+aside{
+    text-align: center;
+    margin: auto;
+}
+
+fieldset{
+    width: fit-content;
+    margin: auto;
+}
+
+button {
+  background-color: #0e0091;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  color: white;
+  font-family: "manaspace";
+}
