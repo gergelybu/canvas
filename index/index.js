@@ -5,6 +5,7 @@ let partyMember = 0;
 
 $(function () {
   const ART = $("article");
+  const JOBS = getLocalJobs();
   ART.html(characters(JOBS));
     $(".partyAdd").on("click", function (event) {
     if (PARTY.length < 4) {
@@ -37,7 +38,12 @@ $(function () {
     return BG;
   });
 
-  /* a metódus kidolgozás alatt van
+  function getLocalJobs() {
+    const jobs = localStorage.getItem("JOBS");
+    return jobs ? JSON.parse(jobs) : [];
+  }
+
+  /* under development
   $(".remove").on("click", function () {
     let index = $(this).data("index");
     console.log(index);

@@ -25,30 +25,36 @@
     </nav>
     <article></article>
     <aside>
-      <form action="">
-    <fieldset>
-        <label for="jname">Job name:</label>
-        <input type="text" id="jname" name="jname" /><br />
-        <label for="jtype">Job type:</label>
-        <select name="jytpe" id="jytpe">
-          <option value="hybrid">Hybrid</option>
-          <option value="magic">Magic</option>
-          <option value="martial">Martial</option>
-        </select><br />
-        <label for="jspec">Speciality:</label>
-        <input type="text" id="jspec" name="jspec" /><br />
-        <label for="jimage">Job image:</label>
-        <select name="jimage" id="jimage">
-          <option value="pic1">1</option>
-          <option value="pic2">2</option>
-          <option value="pic3">3</option>
-          <option value="pic4">4</option>
-          <option value="pic5">5</option>
-        </select>
-        <div id="jimage"></div>
-        <button type="button">Add job</button>
-    </fieldset>
-      </form>
+      <div>
+        <form action="">
+          <fieldset>
+            <label for="image">Job image:</label>
+            <select name="image" id="image">
+              <option value="./img/char/1.png" selected="selected">1</option>
+              <option value="./img/char/2.png">2</option>
+              <option value="./img/char/3.png">3</option>
+              <option value="./img/char/4.png">4</option>
+              <option value="./img/char/5.png">5</option></select
+            ><br />
+            <label for="name">Job name:</label>
+            <input type="text" id="name" name="name" value="job" /><br />
+            <label for="type">Job type:</label>
+            <select name="type" id="type">
+              <option value="hybrid" selected="selected">Hybrid</option>
+              <option value="magic">Magic</option>
+              <option value="martial">Martial</option></select
+            ><br />
+            <label for="speciality">Speciality:</label>
+            <input
+              type="text"
+              id="speciality"
+              name="speciality"
+              value="Speciality"
+            /> <br />
+            <button type="button" id="add">Add job</button>
+          </fieldset>
+        </form>
+      </div>
     </aside>
   </body>
 </html>
