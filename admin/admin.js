@@ -5,7 +5,7 @@ import {
   editJob,
   addJOB,
   filterBySpec,
-  sort,
+  sorting,
 } from "./functions.js";
 
 $(function () {
@@ -33,9 +33,9 @@ $(function () {
     let key = HEADERS[index];
     const ART = $("article");
     if (order % 2 == 0) {
-      ART.html(sort(JOBS, key, 1, JOBINFO));
+      ART.html(sorting(JOBS, key, 1, JOBINFO));
     } else {
-      ART.html(sort(JOBS, key, -1, JOBINFO));
+      ART.html(sorting(JOBS, key, -1, JOBINFO));
     }
     order += 1;
     console.log(order)

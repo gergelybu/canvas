@@ -52,7 +52,7 @@ export function filterBySpec (JOBS, filterCondition) {
   return filterList;
 }
  
- export function sort(list, key, order, JOBINFO) {
+ export function sorting(list, key, order, JOBINFO) {
   list.sort(function (a, b) {
     let value = 1;
     if (a[key] < b[key]) {
