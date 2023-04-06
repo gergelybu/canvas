@@ -2,7 +2,7 @@ export function generateTable(list, header) {
   let txt = "<div class='jtable'><table><tr>";
   let i = 0;
   for (const key in header) {
-    txt += `<th class='myHeader' data-index=${i}>${header[key]}</th>`;
+    txt += `<th class='myHeader' id=${header[key]} data-index=${i}>${header[key]}</th>`;
     i+=1
   }
   txt += "<th>Remove</th><th>Edit</th></tr>";

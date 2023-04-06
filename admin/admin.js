@@ -12,13 +12,14 @@ $(function () {
   const ART = $("article");
   localStorage.setItem("JOBS", JSON.stringify(JOBS));
   ART.html(generateTable(JOBS, JOBINFO));
+
   $("#add").on("click", function () {
     addJOB(JOBS);
     setLocalJobs(JOBS);
     ART.html(generateTable(JOBS, JOBINFO));
   });
 
-  $(".remove").on("click", function () {
+  $(document).on("click", ".remove", function () {
     let index = $(this).data("index");
     removeJob(JOBS, index);
     setLocalJobs(JOBS);
@@ -27,10 +28,9 @@ $(function () {
 
   const HEADERS = $(".myHeader");
   let order = 0;
-
-  HEADERS.on("click", function () {
-    let index = $(this).data("index");
-    let key = HEADERS[index];
+  $(document).on("click", HEADERS, function (event){ 
+  //HEADERS.on("click", function (event) {
+    let key = event.target.id;
     const ART = $("article");
     if (order % 2 == 0) {
       ART.html(sorting(JOBS, key, 1, JOBINFO));
@@ -38,7 +38,6 @@ $(function () {
       ART.html(sorting(JOBS, key, -1, JOBINFO));
     }
     order += 1;
-    console.log(order)
     return order;
   });
 

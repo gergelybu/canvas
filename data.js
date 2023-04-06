@@ -39,7 +39,7 @@ export const JOBS = [
 
 export const JOBINFO = {
   image: "image",
-  name: "job",
+  name: "name",
   type: "type",
   speciality: "speciality",
 };
