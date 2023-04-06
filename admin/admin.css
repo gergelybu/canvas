@@ -37,6 +37,10 @@ aside{
     margin: auto;
 }
 
+.filter {
+  margin-bottom: 20px;
+}
+
 fieldset{
     width: fit-content;
     margin: auto;

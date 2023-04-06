@@ -46,10 +46,15 @@ export function reset(PARTY, BG) {
   gen(PARTY);
 }
 
-export function resetParty(PARTY, JOBS) {
+export function resetParty(PARTY, JOBS, index) {
   let txt = "";
-  for (let index = 0; index < PARTY.length; index++) {
-    txt += `<tr><td class="jobName" ><p>${JOBS[index].name}</p></td><td><button type='button' class='remParty' data-index=${PARTY.length}>❌</button></td><tr>`;
+  for (let i = 0; i < PARTY.length; i++) {
+    for (let j = 0; j < JOBS.length; j++) {
+      console.log(PARTY[i] == JOBS[j].image);
+      if (PARTY[i] == JOBS[j].image) {
+        txt += `<tr><td class="jobName" ><p>${JOBS[j].name}</p></td><td><button type='button' class='remParty' data-index=${PARTY.length}>❌</button></td><tr>`;
+      }
+    }
   }
   $("#partyTable").html(txt);
 }

@@ -4,6 +4,11 @@ import { gen, reset, characters, resetParty } from "./generate.js";
 let partyMember = 0;
 
 $(function () {
+  function getLocalJobs() {
+    const jobs = localStorage.getItem("JOBS");
+    return jobs ? JSON.parse(jobs) : [];
+  }
+  
   const ART = $("article");
   const JOBS = getLocalJobs();
   ART.html(characters(JOBS));
@@ -20,7 +25,7 @@ $(function () {
       alert("Too many party members!");
       console.log($(".remParty"));
     }
-    reset(PARTY,BG)
+    reset(PARTY, BG);
     return PARTY;
   });
 
@@ -40,16 +45,12 @@ $(function () {
     return BG;
   });
 
-  function getLocalJobs() {
-    const jobs = localStorage.getItem("JOBS");
-    return jobs ? JSON.parse(jobs) : [];
-  }
   $("table").on("click", ".remParty", function (event) {
     let index = $(this).data("index");
     console.log(index);
     PARTY.splice(index - 1, 1);
     console.log(PARTY);
-    reset(PARTY, BG);
+    reset(PARTY, BG), index;
     resetParty(PARTY, JOBS);
   });
 });

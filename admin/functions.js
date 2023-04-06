@@ -1,7 +1,9 @@
 export function generateTable(list, header) {
   let txt = "<div class='jtable'><table><tr>";
+  let i = 0;
   for (const key in header) {
-    txt += `<th>${header[key]}</th>`;
+    txt += `<th class='myHeader' data-index=${i}>${header[key]}</th>`;
+    i+=1
   }
   txt += "<th>Remove</th><th>Edit</th></tr>";
   for (let index = 0; index < list.length; index++) {
@@ -42,3 +44,22 @@ export function addJOB(JOBS) {
   console.log(newJob);
   return JOBS;
 }
+
+export function filterBySpec (JOBS, filterCondition) {
+  let filterList = JOBS.filter(function (elem) {
+    return elem.speciality.toUpperCase().includes(filterCondition.toUpperCase());
+  });
+  return filterList;
+}
+ 
+ export function sort(list, key, order, JOBINFO) {
+  list.sort(function (a, b) {
+    let value = 1;
+    if (a[key] < b[key]) {
+      value = -1;
+    }
+    value *= order;
+    return order;
+  });
+  return generateTable(list, JOBINFO);
+} 
