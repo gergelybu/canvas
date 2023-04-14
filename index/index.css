@@ -10,12 +10,12 @@ header {
   margin-bottom: 20px;
 }
 
-nav{
+nav {
   text-align: center;
   margin-bottom: 20px;
 }
 
-nav button{
+nav button {
   margin-right: 25px;
   margin-left: 25px;
 }
@@ -25,6 +25,10 @@ canvas {
   box-shadow: 0 0 10px rgb(255, 255, 255);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+canvas:hover {
+  cursor: grab;
 }
 
 body {
@@ -39,6 +43,10 @@ button {
   box-shadow: 0 0 10px rgb(255, 255, 255);
   color: white;
   font-family: "manaspace";
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 aside {
@@ -63,6 +71,10 @@ form {
   color: white;
   font-family: "manaspace";
   margin-left: 5px;
+}
+
+#bgsub:hover {
+  cursor: pointer;
 }
 
 .cardHolder {
@@ -98,7 +110,7 @@ form {
   padding-top: 0px;
 }
 
-.jobName{
+.jobName {
   width: 150px;
 }
 

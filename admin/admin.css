@@ -54,6 +54,10 @@ button {
   font-family: "manaspace";
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 article{
   text-align: center;
   margin-bottom: 20px;
