@@ -33,9 +33,11 @@ $(function () {
     let key = event.target.id;
     const ART = $("article");
     if (order % 2 == 0) {
-      ART.html(sorting(JOBS, key, 1, JOBINFO));
+      sorting(JOBS, key, 1, JOBINFO));
+      ART.html(generateTable(list, JOBINFO));
     } else {
-      ART.html(sorting(JOBS, key, -1, JOBINFO));
+      sorting(JOBS, key, -1, JOBINFO));
+      ART.html(generateTable(list, JOBINFO));
     }
     order += 1;
     return order;
