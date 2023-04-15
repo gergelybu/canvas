@@ -61,5 +61,5 @@ export function filterBySpec (JOBS, filterCondition) {
     value *= order;
     return order;
   });
-  //return generateTable(list, JOBINFO);
+  return generateTable(list, JOBINFO);
 } 
