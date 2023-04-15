@@ -34,9 +34,9 @@ $(function () {
     const ART = $("article");
     if (order % 2 == 0) {
       );
-      ART.html(generateTable(sorting(JOBS, key, 1, JOBINFO)));
+      ART.html(orting(JOBS, key, 1, JOBINFO));
     } else {
-      ART.html(generateTable(sorting(JOBS, key, -1, JOBINFO)));
+      ART.html(sorting(JOBS, key, -1, JOBINFO));
     }
     order += 1;
     return order;
