@@ -28,8 +28,8 @@ $(function () {
 
   const HEADERS = $(".myHeader");
   let order = 0;
-  $(document).on("click", HEADERS, function (event){ 
-  //HEADERS.on("click", function (event) {
+  //$(document).on("click", HEADERS, function (event){ 
+  HEADERS.on("click", function (event) {
     let key = event.target.id;
     const ART = $("article");
     if (order % 2 == 0) {
