@@ -28,13 +28,12 @@ $(function () {
 
   const HEADERS = $(".myHeader");
   let order = 0;
-  //$(document).on("click", HEADERS, function (event){ 
-  HEADERS.on("click", function (event) {
+  $(document).on("click", HEADERS, function (event){ 
+  //HEADERS.on("click", function (event) {
     let key = event.target.id;
     const ART = $("article");
     if (order % 2 == 0) {
-      );
-      ART.html(orting(JOBS, key, 1, JOBINFO));
+      ART.html(sorting(JOBS, key, 1, JOBINFO));
     } else {
       ART.html(sorting(JOBS, key, -1, JOBINFO));
     }

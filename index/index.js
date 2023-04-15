@@ -8,7 +8,6 @@ $(function () {
     const jobs = localStorage.getItem("JOBS");
     return jobs ? JSON.parse(jobs) : [];
   }
-  
   const ART = $("article");
   const JOBS = getLocalJobs();
   ART.html(characters(JOBS));
